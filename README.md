@@ -24,7 +24,7 @@ data.feed -> feed name
 data.json -> array of datas
 
 ```javascript
-IO.IO.getData(feed, function (data) => {
+IO.getData(feed, function (data) => {
   console.log(data.feed, data.json);
 });
 ```
@@ -36,5 +36,5 @@ It takes two parameters:
 - value → what to post
 
 ```javascript
-IO.IO.postData(feed, value);
+IO.postData(feed, value);
 ```
