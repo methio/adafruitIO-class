@@ -24,7 +24,7 @@ data.feed -> feed name
 data.json -> array of datas
 
 ```javascript
-IO.getData(feed, function (data) => {
+IO.getData(feed, function(data) {
   console.log(data.feed, data.json);
 });
 ```
