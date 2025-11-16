@@ -1,11 +1,12 @@
 class AdafruitIO{
-    constructor(username, aiokey) {
+    constructor(username, aiokey, limit = 10) {
       this.username = username;
       this.aiokey = aiokey;
+      this.limit = limit;
     }
     
     getData(feed, callback = console.log) {
-      fetch(`https://io.adafruit.com/api/v2/${this.username}/feeds/${feed}/data`, {
+      fetch(`https://io.adafruit.com/api/v2/${this.username}/feeds/${feed}/data?limit=${this.limit}`, {
           headers: {
             'X-AIO-Key': this.aiokey
           }
@@ -15,6 +16,10 @@ class AdafruitIO{
           return { feed, json };
         })
         .then(json => callback(json))
+    }
+
+    setLimit(newLimit){
+      this.limit = newLimit;
     }
     
     postData(feed, value, callback = console.log){

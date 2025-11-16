@@ -38,3 +38,15 @@ It takes two parameters:
 ```javascript
 IO.postData(feed, value);
 ```
+
+### Other methods 
+
+#### setLimit()
+
+The .setLimit() method allow you to limit the amount of data return by the .getData() method. 
+
+```javascript 
+IO.setLimit(1);
+```
+
+The line of code above will reduce the number of values returned by the .getData() to 1.
